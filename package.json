@@ -1,0 +1,20 @@
+{
+  "name": "stagefacile",
+  "version": "1.0.0",
+  "description": "Projet de fin d'année ViaFormation.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Chevalier Léo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.2.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.29.1"
+  }
+}

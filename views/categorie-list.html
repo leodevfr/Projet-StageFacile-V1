@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center mt-3">
+        <div class="row ">
+          <h2>Ajouter une catergorie</h2>
+          <form method="POST" action="/category-create" enctype="application/x-www-form-urlencoded">
+            <div class="col-md-12">
+              <div class="input-group mb-3">
+                <input name="category" type="text" class="form-control" placeholder="Categorie" aria-label="categorie"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Ajouter</button>
+              </div>
+            </div>
+          </form>
+      
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <h2>Liste des categories :</h2>
+      
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Modifier</th>
+                <th scope="col">Supprimer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each categories }}
+              <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{name}}</td>
+                <td>
+                  <a href="/form-category-update/?id={{id}}" class="btn btn-secondary">Modifier</a>
+                </td>
+                <td>
+                  <form action="/category-delete/{{id}}" method="POST">
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                  </form>
+                </td>
+              </tr>
+              <!-- Modal modification-->
+              <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="Modification" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="modification de  {{id}}">Modifier une categorie</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/category-update/{{id}}" method="POST" enctype="application/x-www-form-urlencoded">
+                      <div class="modal-body">
+                        <input name="category" type="text" class="form-control" placeholder="Categorie" aria-label="categorie"
+                          aria-describedby="button-addon2" value="{{name}}">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+</body>
+</html>

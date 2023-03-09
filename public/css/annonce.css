@@ -1,0 +1,100 @@
+/*-------------------- Annonces ----------------------*/
+
+.jobs .row{
+    margin:0;
+    }
+    .heading{
+    text-align:center;
+    margin-bottom:30px;
+    }
+    .heading h2{
+    font-weight:400;
+    margin-bottom:10px;
+    }
+    .heading p{
+    font-weight:300;
+    font-size:17px;
+    }
+    .companies{
+    margin-top:30px;
+    }
+    .company-logo{
+    display: table;
+    width: 100%;
+    }
+    .company-logo img{
+    margin:0 auto;
+    max-width:100px
+    }
+
+    .company-content h3{
+    font-size:25px;
+    font-weight:400;
+    margin-bottom:10px;
+    margin-top:7px;
+    }
+    .company-content h3 span {
+    font-size: 13px;
+    padding: 2px 20px;
+    float: right;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5px;
+    display: inline-block;
+    line-height: 1.7;
+    border-radius: 2px;
+    }
+    .company-content p span{
+    font-size:15px;
+    margin-right:20px;
+    margin-bottom:10px;
+    }
+    .company-content p span i{
+    font-size:15px;
+    margin-right:5px;
+    }
+    .company-list {
+    background: #ffffff;
+    margin: 12px 0;
+    padding: 12px 0 12px 0;
+    border:1px solid #f4f5f7;
+    -webkit-box-shadow:0px 0px 10px 0px rgba(107,121,124,0.2);
+    box-shadow:0px 0px 10px 0px rgba(107,121,124,0.2);
+    }
+
+ /*Couleurs des durées de stage*/   
+    .company-content h3 .full-time{
+    background:#55bd61;
+    }
+    .company-content h3 .freelance{
+    background:#01b5ff;
+    }
+    .company-content h3 .internship{
+    background:#cc68f3;
+    }
+    .company-content h3 .part-time{
+    background:#ff8f3e;
+    }
+ /*Couleurs des durées de stage*/   
+
+    .brows-btn{
+    background:#55bd61;
+    color:#ffffff;
+    text-transform:uppercase;
+    font-size:16px;
+    display:table;
+    text-shadow:none;
+    line-height: 1.2;
+    margin:20px auto;
+    font-weight:400;
+    padding:14px 25px;
+    }
+
+.row.heading {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+ background-color: #55bd61;
+}
